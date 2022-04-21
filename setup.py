@@ -5,7 +5,7 @@ import sys
 from setuptools import setup
 
 
-__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co> forked by narkopolo'
+__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co>'
 
 
 with open('README.md') as readme_file:
@@ -30,7 +30,7 @@ elif sys.argv[-1] == 'clean':
 setup(
     name="pyautogecko",
     version="0.1.2",
-    author="Yeongbin Jo, forked by narkopolo",
+    author="Yeongbin Jo",
     author_email="narkopolo@riseup.net",
     description="Automatically install geckodriver that supports the currently installed version of Firefox.",
     license="MIT",
