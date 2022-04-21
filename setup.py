@@ -28,7 +28,7 @@ elif sys.argv[-1] == 'clean':
 
 
 setup(
-    name="geckodriver-autoinstaller",
+    name="python-geckodriver-autoinstaller",
     version="0.1.1",
     author="Yeongbin Jo",
     author_email="yeongbin.jo@pylab.co",
