@@ -5,7 +5,7 @@ import sys
 from setuptools import setup
 
 
-__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co>'
+__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co> forked by narkopolo'
 
 
 with open('README.md') as readme_file:
@@ -23,22 +23,22 @@ elif sys.argv[-1] == 'clean':
         shutil.rmtree('build')
     if os.path.isdir('dist'):
         shutil.rmtree('dist')
-    if os.path.isdir('geckodriver_autoinstaller.egg-info'):
-        shutil.rmtree('geckodriver_autoinstaller.egg-info')
+    if os.path.isdir('pyautogecko.egg-info'):
+        shutil.rmtree('pyautogecko.egg-info')
 
 
 setup(
-    name="python-geckodriver-autoinstaller",
+    name="pyautogecko",
     version="0.1.1",
-    author="Yeongbin Jo",
-    author_email="yeongbin.jo@pylab.co",
+    author="Yeongbin Jo, forked by narkopolo",
+    author_email="narkopolo@riseup.net",
     description="Automatically install geckodriver that supports the currently installed version of chrome.",
     license="MIT",
     keywords="geckodriver chrome selenium splinter",
-    url="https://github.com/yeongbin-jo/python-geckodriver-autoinstaller",
-    packages=['geckodriver_autoinstaller'],
+    url="https://github.com/narkopolo/pyautogecko",
+    packages=['pyautogecko'],
     entry_points={
-        'console_scripts': ['geckodriver-path=geckodriver_autoinstaller.utils:print_geckodriver_path'],
+        'console_scripts': ['geckodriver-path=pyautogecko.utils:print_geckodriver_path'],
     },
     long_description_content_type='text/markdown',
     long_description=long_description,
