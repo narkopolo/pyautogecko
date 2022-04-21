@@ -180,7 +180,7 @@ def download_geckodriver(cwd=False):
         url = get_geckodriver_url(geckodriver_version)
         try:
             response = requests.get(url)
-            if response.status_code() != 200:
+            if response.status_code != 200:
                 raise requests.exceptions.RequestException('Not Found')
         except requests.exceptions.RequestException:
             raise RuntimeError(f'Failed to download geckodriver archive: {url}')
