@@ -29,7 +29,7 @@ elif sys.argv[-1] == 'clean':
 
 setup(
     name="geckodriver-autoinstaller",
-    version="0.1.0",
+    version="0.1.1",
     author="Yeongbin Jo",
     author_email="yeongbin.jo@pylab.co",
     description="Automatically install geckodriver that supports the currently installed version of chrome.",
@@ -53,5 +53,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
 )
