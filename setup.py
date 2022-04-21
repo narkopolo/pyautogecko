@@ -32,9 +32,9 @@ setup(
     version="0.1.1",
     author="Yeongbin Jo, forked by narkopolo",
     author_email="narkopolo@riseup.net",
-    description="Automatically install geckodriver that supports the currently installed version of chrome.",
+    description="Automatically install geckodriver that supports the currently installed version of Firefox.",
     license="MIT",
-    keywords="geckodriver chrome selenium splinter",
+    keywords="geckodriver firefox selenium splinter",
     url="https://github.com/narkopolo/pyautogecko",
     packages=['pyautogecko'],
     entry_points={

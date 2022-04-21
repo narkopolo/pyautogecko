@@ -26,8 +26,8 @@ def install(cwd=False):
 
 def get_firefox_version():
     """
-    Get installed version of chrome on client
+    Get installed version of Firefox on client
 
-    :return: The version of chrome
+    :return: The version of Firefox
     """
     return utils.get_firefox_version()

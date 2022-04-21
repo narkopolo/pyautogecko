@@ -14,7 +14,7 @@ import requests
 from io import BytesIO
 
 
-__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co>'
+__author__ = 'Yeongbin Jo <yeongbin.jo@pylab.co> forked by narkopolo'
 
 
 def get_geckodriver_filename():
