@@ -5,11 +5,11 @@ Helper functions for filename and URL generation.
 import sys
 import os
 import subprocess
-import urllib.request
-import urllib.error
 import logging
 import tarfile
 import zipfile
+
+import requests
 
 from io import BytesIO
 
@@ -124,7 +124,7 @@ def get_latest_geckodriver_version():
     """
     :return: the latest version of geckodriver
     """
-    url = urllib.request.urlopen('https://github.com/mozilla/geckodriver/releases/latest').geturl()
+    url = requests.get('https://github.com/mozilla/geckodriver/releases/latest').url
     if '/tag/' not in url:
         return
     return url.split('/')[-1]
@@ -179,12 +179,12 @@ def download_geckodriver(cwd=False):
             os.mkdir(geckodriver_dir)
         url = get_geckodriver_url(geckodriver_version)
         try:
-            response = urllib.request.urlopen(url)
-            if response.getcode() != 200:
-                raise urllib.error.URLError('Not Found')
-        except urllib.error.URLError:
+            response = requests.get(url)
+            if response.status_code() != 200:
+                raise requests.exceptions.RequestException('Not Found')
+        except requests.exceptions.RequestException:
             raise RuntimeError(f'Failed to download geckodriver archive: {url}')
-        archive = BytesIO(response.read())
+        archive = BytesIO(response.content)
 
         uncompress(archive, geckodriver_dir)
     else:
