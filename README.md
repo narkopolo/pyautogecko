@@ -1,4 +1,4 @@
-# geckodriver-autoinstaller (updated)
+# Fork of [geckodriver-autoinstaller](https://github.com/yeongbin-jo/python-geckodriver-autoinstaller)
 Automatically download and install [geckodriver](https://github.com/mozilla/geckodriver/releases/latest) that supports the currently installed version of firefox. This installer supports Linux, MacOS and Windows operating systems.
 
 ## Installation
